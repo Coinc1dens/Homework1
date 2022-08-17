@@ -1,0 +1,11 @@
+<view class='container'>
+  <!--Zone 1: 地区选择-->
+  <picker mode='region'>
+    <view>青岛市</view>
+  </picker>
+  <!-- Zone 2: 单行天气信息-->
+  
+  <text>xx°C 晴</text>
+  
+  
+</view>
