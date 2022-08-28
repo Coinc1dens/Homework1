@@ -1,0 +1,11 @@
+<view id="myData">
+  <!-- 每一笔账单记录-->
+  <view id='record-list'>
+    <view class='list-item' wx:for="{{recordList}}" wx:for-item="record">
+      <image src='{{record.categoryImage}}'></image>
+      <text>{{record.category}}</text>
+      <text style="text-align: left;">{{record.money}}</text>
+      <text style="color:gray;font-size:10pt;text-align:right;">{{record.time['year']}}-{{record.time['month']}}-{{record.time['day']}}</text>
+    </view>
+  </view>
+</view>

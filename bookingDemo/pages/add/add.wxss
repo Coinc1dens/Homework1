@@ -1,0 +1,69 @@
+page {
+    height: 100%;
+    background-color: #F0F2F2;
+}
+.moneyInput {
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.moneyInput .desc {
+  color: #FF9A13;
+  font-size: 28px;
+  text-align: right;
+}
+
+.typeItem {
+  margin-top: 5rpx;
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.typeItem .desc {
+  font-size: 16px;
+}
+.money {
+  color: #333;
+  font-size: 16px;
+  min-width: 68px;
+}
+.type {
+  color: #333;
+  font-size: 16px;
+  min-width: 68px;
+}
+.button{
+  margin: 20px 20px 0;
+  height: 44px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 4px;
+}
+
+.normal {
+  color: #999;
+}
+
+.special {
+  color: #4B7EF4;
+}
+
+.selected {
+  background-color: #FF9A13;
+}
+
+.not-selected {
+  background-color: #999;
+}

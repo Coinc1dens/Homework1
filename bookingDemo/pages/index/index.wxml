@@ -1,0 +1,20 @@
+<view id='myLogin'>
+  <block wx:if='{{isLogin}}'>
+    <image id='myIcon' src='{{src}}'></image>
+    <text id='nickName'>{{nickName}}</text>
+  </block>
+  <button wx:else open-type='getUserInfo' bindtap='getMyInfo'>未登录，点此登录</button>
+</view>
+
+<text>◀{{date}}▶ 今日收支 ￥{{costs}}  </text>
+<view id='record-list'>
+  <view class='list-item' wx:for="{{recordList}}" wx:for-item="record">
+    <image src='{{record.categoryImage}}'></image>
+      <text>{{record.category}}</text>
+      <text style="text-align: left;">{{record.money}}</text>
+      <text style="color:gray;font-size:10pt;text-align:right;">{{record.time['hours']}}:{{record.time['minutes']}}</text>
+  </view>
+</view>
+<view class="round-click">
+  <navigator url='/pages/add/add' >再记一笔</navigator>
+</view>

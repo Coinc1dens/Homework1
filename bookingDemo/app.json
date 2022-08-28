@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/add/add"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#4B7EF4",
+    "navigationBarTitleText": "我的记账本",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#808A87",
+    "selectedColor": "#808A87",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_select.png",
+        "text": "今日"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_select.png",
+        "text": "回忆"
+      }
+
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,27 @@
+/* pages/my/my.wxss */
+#myData{
+  margin-top: 0rpx;
+}
+#record-list{
+  min-height: 600rpx;
+  padding: 15rpx;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid gray;
+}
+.list-item image{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+  margin-bottom: 10rpx;
+  width: 280rpx;
+  height: 80rpx;
+}
+.list-item text{
+  margin-top: 10rpx;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 12pt;
+}
