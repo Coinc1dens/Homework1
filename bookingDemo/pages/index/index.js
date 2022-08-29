@@ -11,18 +11,21 @@ Page({
     recordList: []
   },
   getMyInfo: function (e) {
-    wx.getUserProfile({
-      desc: '展示用户信息',
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          isLogin: true,
-          src: res.userInfo.avatarUrl,
-          nickName: res.userInfo.nickName
-        })
-      }
-    });
-    getApp().globalData.loginFlag=true;
+    if(getApp().globalData.loginFlag == false){
+      wx.getUserProfile({
+        desc: '展示用户信息',
+        success: (res) => {
+          console.log(res)
+          this.setData({
+            isLogin: true,
+            src: res.userInfo.avatarUrl,
+            nickName: res.userInfo.nickName
+          })
+        }
+      });
+      getApp().globalData.loginFlag=true;
+    }
+    
     this.getMyRecords();
   },
   getPresentTime: function() {
@@ -59,8 +62,10 @@ Page({
     info = formatInfo;
     let cost = 0.00;
     for (let v of info){
-      cost -= v.money
+      v.money = Number(v.money).toFixed(2);
+      cost -= v.money;
     }
+    cost = cost.toFixed(2);
     this.setData({
       recordList: info,
       date: today['year']+'-'+today['month']+'-'+today['day'],
@@ -85,7 +90,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if(this.data.isLogin){
+    if(getApp().globalData.loginFlag){
       this.getMyInfo()
     }
     else{
