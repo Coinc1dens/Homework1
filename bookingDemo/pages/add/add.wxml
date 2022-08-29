@@ -2,7 +2,7 @@
   <view class='addItem'>
     <view class='moneyInput'>
       <text class='money'>金额</text>
-      <input class='desc' placeholder="0" maxlength="9" type="number" bindinput='onAmountChange' value="{{money}}"></input>
+      <input class='desc' placeholder="0" maxlength="9" type="text" bindinput='onAmountChange' value="{{money}}"></input>
     </view>
     <view class='typeItem'>
       <text class='type'>分类</text>

@@ -37,7 +37,7 @@ Page({
   saveBtn() {
     const today = new Date();
     const { money, index } = this.data;
-    if (index === 0 || !money) return;
+    if (index === 0 || !money || isNaN(money) == true) return;
     let accountArr = wx.getStorageSync('accountArr') || [];
     accountArr.push({
         money: money,
